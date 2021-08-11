@@ -1,36 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  scroll-behavior: smooth;
-}
-.registration {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid;
-  width: 30%;
-  background-color: white;
-  margin: 10% auto;
-}
-.input {
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 0px;
-  text-align: center;
-  width: 400px;
-  margin-left: 50px;
-  background-color: #87bfff;
-}
-.proceed-btn {
-  margin-top: 20px;
-  border-radius: 0px;
-  text-align: center;
-  width: 100px;
-  margin-left: 50px;
-  padding: 8px;
-  margin-bottom: 20px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -39,11 +7,39 @@
   scroll-behavior: smooth;
 }
 
+body {
+  width: 300px;
+  height: 100px;
+  display: block;
+}
+
+body::after {
+  content: "";
+  background: url(./baking.jpeg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.input {
+  display: flex;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 0px;
+  text-align: center;
+  width: 400px;
+  margin-left: 5px;
+  background-color: white;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
   /* background-color: #a0ced9; */
-  background-color: powderblue;
+  background-color: #ffcdb2;
   /* position: fixed; */
   width: 100vw;
   opacity: 90%;
@@ -74,4 +70,40 @@
 }
 .navbar-icons5 {
   margin-left: 20px;
+}
+.signin-container {
+  display: flex;
+  margin: 150px auto;
+  border: 1px solid white;
+  width: 1020px;
+  height: 500px;
+  margin-left: 500px;
+}
+.sign-in {
+  padding: 5%;
+  background: white;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.img {
+  height: 300px;
+  width: 450px;
+}
+.text {
+  background-color: #ffcdb2;
+  color: black;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Amatic SC", cursive;
+  padding: 16px 32px;
+}
+.image {
+  background-color: #ffcdb2;
+}
+.sign-text {
+  font-size: 30px;
+  font-family: "Amatic SC", cursive;
+  font-weight: bolder;
 }

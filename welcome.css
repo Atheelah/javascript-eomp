@@ -5,17 +5,24 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-body {
-  background-image: url(./yoco\ back.jpeg);
-  background-size: cover;
-  background-attachment: fixed;
+.image-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  z-index: -1;
+}
+.img {
+  width: 50vw;
 }
 .navbar {
   display: flex;
   justify-content: flex-end;
-  /* background-color: #a0ced9; */
-  background-color: powderblue;
-  /* position: fixed; */
+
+  background-color: #ffcdb2;
+
   width: 100vw;
   opacity: 90%;
   z-index: 9999;
@@ -49,7 +56,7 @@ body {
 .logo {
   width: 200px;
   height: 200px;
-  margin-left: 30%;
+  margin-left: 35%;
   margin-top: 10%;
   animation: zoom 5s linear infinite;
 }
@@ -63,4 +70,31 @@ body {
   40% {
     transform: scale(0.95);
   }
+}
+.started {
+  border-radius: 50px;
+  padding: 8px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  margin-left: 86%;
+  margin-top: 26%;
+  background: black;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+.button {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  font-size: 1.1em;
+  background: white;
+  color: black;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
 }
