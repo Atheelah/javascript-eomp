@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -26,13 +27,17 @@ body::after {
 }
 .input {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   margin-top: 20px;
   border-radius: 0px;
   text-align: center;
   width: 400px;
-  margin-left: 5px;
+  margin-left: 4px;
   background-color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .navbar {
@@ -74,7 +79,6 @@ body::after {
 .signin-container {
   display: flex;
   margin: 150px auto;
-  border: 1px solid white;
   width: 1020px;
   height: 500px;
   margin-left: 500px;
@@ -85,10 +89,11 @@ body::after {
   font-family: "Amatic SC", cursive;
   font-size: 30px;
   font-weight: bolder;
+  width: 49%;
 }
 
 .img {
-  height: 300px;
+  height: auto;
   width: 450px;
 }
 .text {
@@ -101,9 +106,44 @@ body::after {
 }
 .image {
   background-color: #ffcdb2;
+  width: 49%;
 }
 .sign-text {
-  font-size: 30px;
+  font-size: 50px;
   font-family: "Amatic SC", cursive;
   font-weight: bolder;
+}
+.quote {
+  font-size: 30px;
+  font-family: "Amatic SC", cursive;
+  margin-left: 8%;
+}
+.register {
+  border: none;
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  font-weight: bolder;
+  color: rgb(250, 98, 123);
+  background-color: white;
+}
+p {
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.proceed-btn {
+  padding: 2px;
+  font-family: "Amatic SC", cursive;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-left: 5px;
+  width: 63%;
+  margin-top: 5%;
+  background-color: #ffcdb2;
+  border: 2px solid rgb(250, 98, 123);
+}
+.proceed-btn:hover {
+  background: white;
+  color: black;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
 }

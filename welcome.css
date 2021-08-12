@@ -89,12 +89,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: black;
 }
 
 .button:hover {
   font-size: 1.1em;
   background: white;
   color: black;
+  border: white;
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
 }
