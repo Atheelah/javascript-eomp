@@ -7,6 +7,7 @@
     <title>Registration</title>
     <link rel="stylesheet" href="./registration.css" />
     <link rel="icon" href="./letter b.png" type="image/htx+wt" />
+    <script src="./registration.js"></script>
   </head>
   <body>
     <nav id="home" class="navbar-container">
@@ -66,9 +67,11 @@
           <input type="text" placeholder="last name" class="input" />
           <input type="text" placeholder="username" class="input" />
           <input type="text" placeholder="password" class="input" />
-          <a href="./sign in.html">
-            <button class="proceed-btn">proceed to sign in</button>
-          </a>
+          <input type="text" placeholder="email@domain.com" class="input" />
+
+          <button onclick="registration()" class="proceed-btn">
+            proceed to sign in
+          </button>
         </div>
       </div>
     </section>

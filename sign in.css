@@ -38,6 +38,7 @@ body::after {
   font-weight: bolder;
   font-size: 25px;
   margin-bottom: 20px;
+  border: 1px solid black;
 }
 
 .navbar {

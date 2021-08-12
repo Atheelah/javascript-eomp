@@ -27,7 +27,7 @@ body::after {
 }
 .input {
   display: flex;
-  padding: 10px;
+  padding: 6px;
   margin-top: 20px;
   border-radius: 0px;
   text-align: center;
@@ -37,6 +37,7 @@ body::after {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bolder;
   font-size: 20px;
+  border: 1px solid black;
 }
 
 .navbar {
