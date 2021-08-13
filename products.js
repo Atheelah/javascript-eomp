@@ -1,4 +1,6 @@
 let productsContainer = document.querySelector("#products-container");
+let cart = [];
+console.log(cart);
 let productsList = [
   {
     imgUrl: "./ibrahim-boran-Q9KUfbgzGnA-unsplash(1).jpg",
@@ -110,4 +112,18 @@ function addToCart(id) {
     return item.id == id;
   });
   console.log(product);
+  cart.push(product);
+  console.log("Your cart items are: ", cart);
+}
+
+function searchForProducts(){
+  let searchTerm = document.querySelector("#searchTerm").value;
+  console.log(searchTerm)
+
+  let searchedProducts = products.filter(product => product.view-cart.toLowerCase().contains()(searchTerm.toLowerCase()));
+  console.log(searchTerm)
+}
+
+function toggleCart(){
+  document.querySelector("#cart").classList.toggle("active")
 }

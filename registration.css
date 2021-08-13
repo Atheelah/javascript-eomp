@@ -145,3 +145,19 @@ body::after {
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
 }
+#cart{
+  position: fixed;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  z-index: 3;
+  background-color: hotpink;
+  transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+#cart.active{
+  right: 0;
+}
