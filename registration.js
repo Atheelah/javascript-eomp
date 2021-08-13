@@ -10,7 +10,7 @@ function registration() {
   console.log(username);
   console.log(password);
   console.log(email);
-  fetch("https://desolate-forest-25770.herokuapp.com/user-registration", {
+  fetch("https://desolate-forest-25770.herokuapp.com/user-registration/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

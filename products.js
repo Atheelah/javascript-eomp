@@ -21,7 +21,7 @@ let productsList = [
     imgAlt: "Koeksister",
     productName: "Koeksisters",
     productDescription:
-      "Mouth watering Cape Malay Koeksister, flavoured with cinnamon, cardamon, mixed spice and aniseed. Dipped into a sugar syrup and coated in coconut. ",
+      "Mouth watering Cape Malay Koeksister, flavoured with spices. Dipped into a sugar syrup and coated in coconut. ",
     productPrice: "3 for R10",
   },
   {
@@ -37,14 +37,15 @@ let productsList = [
     imgAlt: "Banana loaf",
     productName: "Banana loaf",
     productDescription:
-      "Moist banana sweet cake, enjoyed with a cup of coffee or tea",
+      "Moist sweet cake like bread, made with bananas and enjoyed with a cup of coffee or tea",
     productPrice: "R30.00",
   },
   {
     imgUrl: "./date cake.jpeg",
-    imgAlt: "Date Cake",
-    productName: "Date Cake",
-    productDescription: "Delcious cake made of juicy dates and crunchy walnuts",
+    imgAlt: "Date Loaf",
+    productName: "Date Loaf",
+    productDescription:
+      "Delcious sweet cake made of juicy dates and crunchy walnuts, leaving an amazing taste in your mouth ",
     productPrice: "R40.00",
   },
   {
@@ -103,3 +104,10 @@ function productCard(card) {
 productsList.forEach((card) => {
   productsContainer.innerHTML += productCard(card);
 });
+
+function addToCart(id) {
+  let product = products.find((item) => {
+    return item.id == id;
+  });
+  console.log(product);
+}
