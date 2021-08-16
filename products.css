@@ -93,5 +93,34 @@
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
 }
+
+#cart {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  top: 0;
+  right: -100vw;
+  z-index: 1;
+  overflow-y: scroll;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#cart.active {
+  box-shadow: 3px 3px 3px 3px rgba(0.5, 0.0, 0.5, 0.5);
+  right: 0;
+  width: 20%;
+  background-color: antiquewhite;
+  font-family: "Amatic SC", cursive;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.close-btn{
+  border-radius: 100%;
+  padding: 5px 10px;
+  background-color: antiquewhite;
+  border-color: black 1px solid ;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
 @media (max-width: 1000px) {
 }

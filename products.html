@@ -59,12 +59,18 @@
       <button onclick="sortPriceAsc()">Sort by Price Asc </button>
       <button onclick="sortPriceDesc()">Sort by Price Desc</button>
       <button onclick="getdata()">Clear filters</button> 
-
     </div>
     <div id="products-container"></div>
+    <div>
+      <div id="cart">These are the items in your cart :- 
+        <button onclick= "toggleCart()" id="card-button" class="close-btn">X</button>
+      </div>
+     
+    </div>
+   
+      <button onclick= "toggleCart()" id="card-button">View cart</button>
     
-    <div id="cart">You have no items in the cart</div>
-    <button onclick= "toggleCart()" id="card-button">Cart</button>
+    
     <script src="./products.js"></script>
     </body>
 </html>
