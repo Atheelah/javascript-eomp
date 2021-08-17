@@ -40,37 +40,44 @@
         </div>
         <div>
           <li class="navbar-link">
-            <a href="#items" class="nav-button"
+            <a href="./cart.html" class="nav-button"
               ><img
                 class="navbar-icons5"
                 src="https://img.icons8.com/material-sharp/32/000000/add-shopping-cart.png"
-            /> </a>
+              />
+            </a>
           </li>
         </div>
       </ul>
     </nav>
     <div id="filters">
       <form onsubmit="event.preventDefault(); searchForProducts()">
-        <input type="text" required id="searchTerm" placeholder="what are you looking for?"/>
+        <input
+          type="text"
+          required
+          id="searchTerm"
+          placeholder="what are you looking for?"
+        />
         <button type="submit">Search</button>
       </form>
-      <button onclick="sortNameAsc()">Sort by Name Asc </button>
-      <button onclick="sortNameDesc()">Sort by Name Desc </button> 
-      <button onclick="sortPriceAsc()">Sort by Price Asc </button>
+      <button onclick="sortNameAsc()">Sort by Name Asc</button>
+      <button onclick="sortNameDesc()">Sort by Name Desc</button>
+      <button onclick="sortPriceAsc()">Sort by Price Asc</button>
       <button onclick="sortPriceDesc()">Sort by Price Desc</button>
-      <button onclick="getdata()">Clear filters</button> 
+      <button onclick="getdata()">Clear filters</button>
     </div>
     <div id="products-container"></div>
     <div>
-      <div id="cart">These are the items in your cart :- 
-        <button onclick= "toggleCart()" id="card-button" class="close-btn">X</button>
+      <div id="cart">
+        These are the items in your cart :-
+        <button onclick="toggleCart()" id="card-button" class="close-btn">
+          X
+        </button>
       </div>
-     
     </div>
-   
-      <button onclick= "toggleCart()" id="card-button">View cart</button>
-    
-    
+
+    <button onclick="toggleCart()" id="card-button">View cart</button>
+
     <script src="./products.js"></script>
-    </body>
+  </body>
 </html>

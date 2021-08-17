@@ -26,3 +26,34 @@ function signin() {
       }
     });
 }
+
+// function login() {
+//   let username = document.querySelector(".username").value;
+//   let password = document.querySelector(".password").value;
+
+//   fetch("https://desolate-forest-25770.herokuapp.com/auth", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       username: username,
+//       password: password,
+//     }),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+
+//       if (data["access_token"]) {
+//         console.log(data);
+//         localStorage.setItem("jwt_token", data["access_token"]);
+//         window.location.href = "./products.html";
+//       }
+//     });
+// }
+
+// document.querySelector(".proceed-btn").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   login();
+// });

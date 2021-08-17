@@ -49,6 +49,27 @@
 //     productPrice: "R4.00",
 //   },
 // ];
+function addToCart(product_id) {
+  let product = "";
+
+  console.log(product_id);
+
+  fetch("https://desolate-forest-25770.herokuapp.com/view-cart/")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.data);
+      // productCard(data);
+
+      let products = data.data;
+
+      product = products.filter((product) => product[0] == product_id);
+
+      console.log(product);
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(product);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    });
+}
 
 let images = [
   {
@@ -63,55 +84,64 @@ let images = [
     imgUrl: "./KOEKSISTERS.jpg",
     imgAlt: "Koeksister",
   },
-] 
+];
 
-function renderImage(card){
-  let item = document.querySelector(".item")
-  let imageMade = item.innerHTML +=` <img src="${card.imgUrl}" alt="${card.imgAlt}">` 
-  return imageMade
+function renderImage(card) {
+  let item = document.querySelector(".item");
+  let imageMade =
+    (item.innerHTML += ` <img src="${card.imgUrl}" alt="${card.imgAlt}">`);
+  return imageMade;
 }
 
 fetch("https://desolate-forest-25770.herokuapp.com/view-cart/")
   .then((res) => res.json())
   .then((data) => {
+    addToCart;
     console.log(data.data);
-    productCard(data)
+    productCard(data);
   });
 
 function productCard(cards) {
   let productsContainer = document.querySelector("#products-container");
-  
+
   productsContainer.innerHTML = "";
-  console.log(cards.data)  
-  cards.data.forEach(card => {
-    productsContainer.innerHTML +=`
+  console.log(cards.data);
+  cards.data.forEach((card) => {
+    productsContainer.innerHTML += `
     <div class="item"> 
+    <img class="productImage" src="${card[5]}" alt="pic">
       <h2 class="name">${card[1]}</h2>
       <p class="description">${card[4]}</p>
       <p class="price">${card[2]}</p>  
-      <button class="card-btn">Add to Cart</button>  
+      <button onclick="addToCart(${card[0]})" class="card-btn">Add to Cart</button>  
     </div>`;
-document.querySelectorAll('.card-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    addToCart(button.parentElement.querySelector('.name').innerHTML, button.parentElement.querySelector('.price').innerHTML)
-  })
-})
-  })
+    // document.querySelectorAll(".card-btn").forEach((button) => {
+    //   button.addEventListener("click", () => {
+    //     addToCart([
+    //       button.parentElement.querySelector(".productImage").innerHTML,
+    //       button.parentElement.querySelector(".name").innerHTML,
+    //       button.parentElement.querySelector(".name").innerHTML,
+    //       button.parentElement.querySelector(".price").innerHTML,
+    //     ]);
+    //   });
+    // });
+  });
 }
-
-
-
 
 // productsList.forEach((card) => {
 //   productsContainer.innerHTML += productCard(card);
 // });
 
-function addToCart(name, price) {
-  // let cart = JSON.parse(window.localStorage.cart);
-  let item = {name: name, price: price}
-  cart.append(item)
-  window.localStorage['cart'] = JSON.stringify(cart)
-}
+// function addToCart(name, price) {
+//   let item = { name: name, price: price };
+//   cart.push(item);
+//   window.localStorage["cart"] = JSON.stringify(cart);
+// }
+// var cart = [];
+
+// if ((window, localStorage["cart"])) {
+//   cart = JSON.parse(window.localStorage["cart"]);
+// }
 
 // function searchForProducts(){
 //   let searchTerm = document.querySelector("#searchTerm").value;
@@ -121,24 +151,23 @@ function addToCart(name, price) {
 //   console.log(searchTerm)
 // }
 
-function toggleCart(){
-  document.querySelector("#cart").classList.toggle("active")
-}
+// function toggleCart() {
+//   document.querySelector("#cart").classList.toggle("active");
+// }
 
-function populateCart() {
-  console.log(cart)
-  document.getElementById('cart').innerHTML = ""
-  cart.forEach(item => {
-    productsContainer.innerHTML +=`
-    <div class="item">  
-    <h2 class="name">${card[1]}</h2>
-    <p class="description">${card[4]}</p>
-    <p class="price">${card[2]}</p>  
-  </div>`;
-    console.log(item)
-    document.getElementById('cart').innerHTML += ``
-  })
-}
+// function populateCart() {
+//   console.log(cart);
+//   document.getElementById("cart").innerHTML = "";
+//   cart.forEach((item) => {
+//     productsContainer.innerHTML += `
+//     <div class="item">
+//     <h2 class="name">${card[1]}</h2>
+//     <p class="description">${card[4]}</p>
+//     <p class="price">${card[2]}</p>
+//   </div>`;
+//     console.log(item);
+//     document.getElementById("cart").innerHTML += ``;
+//   });
+// }
 
 // populateCart()
-
